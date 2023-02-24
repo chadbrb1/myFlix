@@ -56,7 +56,7 @@ class DataRepository with ChangeNotifier{
 
   Future<void> getUpcomingMovies() async {
     try {
-      List<Movie> movies = await apiService.getNowPlaying(pageNumber: _upcomingMoviesIndex);
+      List<Movie> movies = await apiService.getUpcomingMovies(pageNumber: _upcomingMoviesIndex);
       _upcomingMovies.addAll(movies);
       _upcomingMoviesIndex ++ ;
       notifyListeners();

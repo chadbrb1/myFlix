@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:dio/dio.dart';
 
 import '../models/movie.dart';
@@ -55,6 +53,7 @@ class APIService {
   Future<List<Movie>> getNowPlaying({required int pageNumber}) async {
     Response response = await getData('/movie/now_playing', params: {
       'page': pageNumber,
+      'region' : 'FR',
     });
 
     if (response.statusCode == 200) {
@@ -71,9 +70,9 @@ class APIService {
 
   Future<List<Movie>> getUpcomingMovies({required int pageNumber}) async {
     Response response = await getData('/movie/upcoming', params: {
+      'region' : 'FR',
       'page': pageNumber,
     });
-
     if (response.statusCode == 200) {
       Map data = response.data;
       List<Movie> movies = data['results'].map<Movie>((dynamic movieJson) {

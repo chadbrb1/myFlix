@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myflix/repositories/data_repository.dart';
-import 'package:myflix/services/api_service.dart';
 import 'package:myflix/utils/constants.dart';
 import 'package:provider/provider.dart';
 
-import '../../../models/movie.dart';
 import 'movie_card.dart';
 import 'movie_category.dart';
 
@@ -48,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
             imageHeight: 320,
             imageWidth: 220,
             label: "Actuellement au cinéma",
-            movieList: dataProvider.popularMovieList,
+            movieList: dataProvider.nowPlaying,
             callback: dataProvider.getNowPlaying,
           ),
             MovieCategory(
