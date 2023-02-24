@@ -21,7 +21,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   void initData() async {
-    //todo : appel api
     final dataProvider = Provider.of<DataRepository>(context, listen: false);
     //on initialise les differentes listes de movies
     await dataProvider.initData();
@@ -43,7 +42,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/netflix_logo_1.png'),
+            Image.asset('assets/images/logo2.png'),
             SpinKitFadingCircle(
               color: kPrimaryColor,
               size: 20,

@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
         backgroundColor: kBackgroundColor,
-        leading: Image.asset("assets/images/netflix_logo_2.png"),
+        leading: Image.asset("assets/images/logo2.png"),
       ),
       body: ListView(
         children: [
